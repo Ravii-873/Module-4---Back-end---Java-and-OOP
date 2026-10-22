@@ -1,0 +1,23 @@
+ArrayList:
+    Guarda objetos em memória contígua.
+    É um vetor dinâmico, que gerencia um array tradicional
+      (memória contígua), realocando arrays cópia, armazenando
+      variáveis de tamanho, tamanho máximo, etc.
+    *Ordenado por ordens de inserção e modificação, sem jamais alterá-las;*
+    Inserções no final: O(1) amortizado;
+    Remoções no meio: O(n);
+    Consultas: O(1).
+
+HashSet:
+    Por trás dos panos, é um HashMap adaptado.
+    Guarda objetos em buckets de acordo com seus hashes.
+    *Não ordenado, seguindo sua ordem interna de acordo com o hash (sem padrão perceptível) 
+      de cada elemento, que depende do tamanho do set, tamanho dos buckets, load factors, etc.*
+    Inserções, remoções, consultas... em O(1) médio, O(log n) no pior caso 
+      (buckets com mais de 8 elementos colidindo viram Red-Black Trees).
+
+Resumo sobre ordenação:
+    ArrayList não modifica a ordem dos elementos, seguem do início ao fim
+      em seus índices originais.
+    HashSet não tem padrão para a ordem dos elementos, que são armazenados
+      de acordo com seus hashes, que são, a olhos humanos, aleatórios.
