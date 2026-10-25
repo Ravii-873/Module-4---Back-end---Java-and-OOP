@@ -15,11 +15,8 @@ public class Ex4 {
             System.out.println("  " + s);
         });
         
-        System.out.println("\nCopiando do AL para o HS\n");
-        HashSet<String> hs = new HashSet<>();
-        al.forEach(s -> {
-            hs.add(s);
-        });
+        System.out.println("\nCopiando do AL para um HS\n");
+        HashSet<String> hs = new HashSet<>(al);
 
         System.out.println("HashSet:");
         hs.forEach(s -> {
@@ -27,10 +24,7 @@ public class Ex4 {
         });
 
         System.out.println("\nRecopiando do HS para outro AL\n");
-        ArrayList<String> newAl = new ArrayList<>();
-        hs.forEach(s -> {
-            newAl.add(s);
-        });
+        ArrayList<String> newAl = new ArrayList<>(hs);
 
         System.out.println("New ArrayList:");
         newAl.forEach(s -> {
