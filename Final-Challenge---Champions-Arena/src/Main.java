@@ -112,13 +112,15 @@ public class Main {
 
     // Summarize current player's and enemy's information
     static void showStatus(Character player, Enemy enemy) {
-        System.out.println(player.getName() + " | Vida: " + player.getHealth());
-        System.out.println(player.getName() + " | Ataque: " + player.getAttack());
-        System.out.println(player.getName() + " | Defesa: " + player.getDefense());
-        System.out.println(player.getName() + " | Inventário: " + player.getInventory());
-        System.out.println(enemy.getName() + " | Vida: " + enemy.getHealth());
-        System.out.println(enemy.getName() + " | Ataque: " + enemy.getAttack());
-        System.out.println(enemy.getName() + " | Defesa: " + enemy.getDefense());
+        System.out.println(player.getName() + ":");
+        System.out.println("  ├── Vida .........: " + player.getHealth());
+        System.out.println("  ├── Ataque .......: " + player.getAttack());
+        System.out.println("  ├── Defesa .......: " + player.getDefense());
+        System.out.println("  └── Inventário ...: " + player.getInventory());
+        System.out.println(enemy.getName() + ":");
+        System.out.println("  ├── Vida .........: " + enemy.getHealth());
+        System.out.println("  ├── Ataque .......: " + enemy.getAttack());
+        System.out.println("  └── Defesa .......: " + enemy.getDefense());
     }
 
     // Asks player for his action
